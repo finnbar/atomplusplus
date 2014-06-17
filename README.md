@@ -1,4 +1,12 @@
 atomplusplus
 ============
 
-a post-compo version of an old ld48 project
+Hello.
+
+Thank you for downloading my game! I hope you enjoy it.
+
+CREDITS:
+Made in Moonscript (a language by Leafo)
+
+Third-party assets:
+FONT: Fantastque Sans Mono from openfontlibrary.org
