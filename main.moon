@@ -7,6 +7,7 @@ export oldGamestate = {
 }
 
 export fontTitle = love.graphics.newFont("assets/general/FantasqueSansMono-Regular.ttf",32)
+export fontMenu = love.graphics.newFont("assets/general/FantasqueSansMono-Regular.ttf",48)
 export fontNorm = love.graphics.newFont("assets/general/FantasqueSansMono-Regular.ttf",12)
 export fontBold = love.graphics.newFont("assets/general/FantasqueSansMono-Bold.ttf",12)
 

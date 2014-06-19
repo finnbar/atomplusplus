@@ -24,9 +24,9 @@ startup.update = function(dt)
     caret = false
   end
   delay = delay - dt
-  if delay <= 0 then
+  while delay <= 0 do
     staying = subtitle:inc()
-    delay = 0.06
+    delay = delay + 0.06
   end
   if not jingle:isPlaying() then
     gamestate = introduction
@@ -35,4 +35,10 @@ end
 startup.finish = function()
   logo = nil
   subtitle = nil
+end
+startup.keypressed = function(key)
+  if key == " " then
+    jingle:stop()
+    gamestate = introduction
+  end
 end

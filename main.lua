@@ -5,6 +5,7 @@ oldGamestate = {
   _name = "blank"
 }
 fontTitle = love.graphics.newFont("assets/general/FantasqueSansMono-Regular.ttf", 32)
+fontMenu = love.graphics.newFont("assets/general/FantasqueSansMono-Regular.ttf", 48)
 fontNorm = love.graphics.newFont("assets/general/FantasqueSansMono-Regular.ttf", 12)
 fontBold = love.graphics.newFont("assets/general/FantasqueSansMono-Bold.ttf", 12)
 love.load = function(args)

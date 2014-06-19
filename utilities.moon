@@ -33,7 +33,7 @@ export combos = {combo({"H","Cl"},{"magic"}),combo({"O","Cl"},{"magic"}),combo({
 --findCombos({"H","Cl","O"}) (exemplary use)
 
 export class typing
-	new: (text) => --a text containing what you want to print, using ¬ as a delay
+	new: (text) => --a text containing what you want to print, using <tab> as a delay
 		@letters = {}
 		for letter in text\gmatch "%Z" --%Z = everything but a non-existant character
 			if letter~="	"

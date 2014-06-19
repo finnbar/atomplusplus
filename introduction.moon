@@ -4,7 +4,7 @@ introduction._name = "introduction"
 bgm = love.audio.newSource "assets/general/introduction.wav"
 time = 0
 caret = false
-delay = 0.09
+delay = 0.1
 started = false
 staying = true
 colour = 255
@@ -46,9 +46,9 @@ introduction.update = (dt) ->
 		else
 			caret = false
 		delay-=dt
-		if delay<=0
+		while delay<=0
 			staying = subtitle\inc!
-			delay = 0.09
+			delay += 0.1
 		if not bgm\isPlaying!
 			export gamestate = menu
 		if not staying
@@ -58,3 +58,8 @@ introduction.update = (dt) ->
 introduction.finish = () ->
 	bgm = nil
 	export subtitle = nil
+
+introduction.keypressed = (key) ->
+	if key==" "
+		bgm\stop!
+		export gamestate = menu

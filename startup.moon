@@ -25,12 +25,17 @@ startup.update = (dt) ->
 	else
 		caret = false
 	delay-=dt
-	if delay<=0
+	while delay<=0
 		staying = subtitle\inc!
-		delay = 0.06
+		delay += 0.06
 	if not jingle\isPlaying!
 		export gamestate = introduction
 
 startup.finish = () ->
 	export logo = nil
 	export subtitle = nil
+
+startup.keypressed = (key) ->
+	if key==" "
+		jingle\stop!
+		export gamestate = introduction

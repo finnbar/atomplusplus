@@ -3,7 +3,7 @@ introduction._name = "introduction"
 local bgm = love.audio.newSource("assets/general/introduction.wav")
 local time = 0
 local caret = false
-local delay = 0.09
+local delay = 0.1
 local started = false
 local staying = true
 local colour = 255
@@ -42,9 +42,9 @@ introduction.update = function(dt)
       caret = false
     end
     delay = delay - dt
-    if delay <= 0 then
+    while delay <= 0 do
       staying = subtitle:inc()
-      delay = 0.09
+      delay = delay + 0.1
     end
     if not bgm:isPlaying() then
       gamestate = menu
@@ -59,4 +59,10 @@ end
 introduction.finish = function()
   bgm = nil
   subtitle = nil
+end
+introduction.keypressed = function(key)
+  if key == " " then
+    bgm:stop()
+    gamestate = menu
+  end
 end
